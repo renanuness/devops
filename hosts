@@ -1,3 +1,5 @@
 127.0.0.1   	localhost
 10.0.3.15   	git
 192.168.1.10	intranet
+
+192.168.1.20 	cliente interno
