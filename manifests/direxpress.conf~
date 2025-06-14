@@ -1,0 +1,7 @@
+<Directory /srv/www>
+	Option FollowSymLinks
+	AllowOverride None
+	Require all granted
+</Directory>
+
+

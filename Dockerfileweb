@@ -1,0 +1,11 @@
+FROM centos:7.9.2009
+MAINTAINER Renan Nunes
+ENV PORT=80
+COPY ./web/ /var/www/html
+COPY ./centos-base.repo /tmp
+RUN cat /tmp/centos-base.repo > /etc/yum.repos.d/CentOS-Base.repo
+RUN yum install httpd php mod_php php-mysql -y
+EXPOSE $PORT
+WORKDIR /etc/httpd
+CMD ["-D", "FOREGROUND"]
+ENTRYPOINT ["/usr/sbin/httpd"]
