@@ -10,6 +10,7 @@ pipeline {
 
         stage('Build Images') {
             steps {
+		sh 'whoami'
                 script {
                     // Nome das imagens
                     def imageNameWeb = 'renanuness/web'
